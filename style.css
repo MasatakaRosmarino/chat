@@ -1,0 +1,19 @@
+#chat-box{
+	min-height: 50vh;
+	height: 50vh;
+	overflow-y: auto;
+}
+#login-message{
+	margin-top: 20px;
+}
+.message-box{
+	overflow: auto;
+}
+#logged-user{
+	font-family: arial;
+	color: blue;
+}
+textarea{
+	height: 4em;
+	resize: none;
+}
