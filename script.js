@@ -1,6 +1,7 @@
-window.onload = fetch();
-
 var scrollbar = document.getElementById("chat-box");
+var chatMessage;
+
+window.onload = fetch();
 
 fetchOnScroll();
 
@@ -32,24 +33,22 @@ function fetch(){
 		}
 	}
 
-	asyncReq.send();
+	asyncReq.send();	
 }
 
 var sendBtn = document.getElementsByTagName("button")[0];
 
 sendBtn.addEventListener("click", function(e){
 	e.preventDefault();
-	send();
-	fetch();
 
-	/* var chatMessage = document.getElementsByTagName("textarea")[0].value;
+	chatMessage = document.getElementsByTagName("textarea")[0].value;
+
 	if(chatMessage == null || chatMessage == ""){
 		alert("enter a message");
 	}else{
 		send();
-		fetch();
-	} */
-	
+		fetch();		
+	}
 });
 
 function send(){
